@@ -1,0 +1,7 @@
+{% extends 'userform/base.html' %} {% block content %}
+<p>こんちは</p>
+<form action="{% url 'userform:regist_confirm'%}" method="POST">
+    {{form.as_p}} {% csrf_token %}
+    <input type="submit" value="送信">
+</form>
+{% endblock %}
