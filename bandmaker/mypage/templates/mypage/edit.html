@@ -1,0 +1,7 @@
+{% extends 'mypage/base.html' %} {% block content %}
+<p>プロフィール編集</p>
+<form action="{% url 'mypage:edit_confirm'%}" method="POST">
+    {{form.as_p}}{% csrf_token %}
+    <input type="submit" value="登録">
+</form>
+{% endblock %}

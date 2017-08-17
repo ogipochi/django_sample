@@ -1,0 +1,7 @@
+{% extends 'accounts/base.html' %} {% block content %}
+<p>こんにちわ</p>
+<form action="{% url 'accounts:regist_confirm' %}" method="POST">
+    {{form.as_p}}{% csrf_token %}
+    <input type="submit" value="登録">
+</form>
+{% endblock %}
