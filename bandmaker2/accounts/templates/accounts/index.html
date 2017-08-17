@@ -1,0 +1,6 @@
+{% extends 'accounts/base.html' %} {% block content %}
+<h1>
+    {% if user.is_authenticated %} ユーザ名:{{ user.username}}<br> {% else %} ようこそゲスト {% endif %}
+</h1>
+<hr>
+<a href="{% url 'accounts:regist' %}">ユーザ作成</a> {% endblock %}
